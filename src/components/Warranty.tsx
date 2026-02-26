@@ -34,7 +34,7 @@ export function Warranty() {
         </div>
 
         <a 
-          href="https://wa.me/5583999999999"
+          href="https://wa.me/558386044833"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-black text-white rounded-full text-base font-medium hover:shadow-lg hover:shadow-black/10 transition-all min-h-[56px] w-full sm:w-auto"

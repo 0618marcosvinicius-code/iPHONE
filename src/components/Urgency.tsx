@@ -24,7 +24,7 @@ export function Urgency() {
         </div>
 
         <a 
-          href="https://wa.me/5583999999999"
+          href="https://wa.me/558386044833"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-full text-base font-medium hover:bg-gray-200 transition-all shadow-lg shadow-black/20 min-h-[56px] w-full sm:w-auto"

@@ -37,7 +37,7 @@ export function QuizForm() {
     
     const message = `Olá! Gostaria de um orçamento.%0A%0A*Serviço:* ${formData.service}%0A*Modelo:* ${formData.model}%0A%0A*Meus Dados:*%0A*Nome:* ${formData.name}%0A*E-mail:* ${formData.email}%0A*WhatsApp:* ${formData.phone}`;
     
-    window.open(`https://wa.me/5583999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/558386044833?text=${message}`, '_blank');
   };
 
   return (

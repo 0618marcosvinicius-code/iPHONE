@@ -19,26 +19,26 @@ export function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-blue-50/80 to-purple-50/80 blur-[100px] rounded-full pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center py-14 md:py-20">
-        <div className="max-w-[720px] mx-auto flex flex-col items-center">
-          <h1 className="text-[clamp(32px,6vw,64px)] font-light text-gray-900 tracking-tight leading-[1.1] mb-6">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 text-left md:text-center flex flex-col items-start md:items-center py-14 md:py-20">
+        <div className="max-w-[680px] mx-auto flex flex-col items-start md:items-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium text-gray-900 tracking-tight leading-[1.1] mb-6 text-left md:text-center">
             Quebrou? Não carrega?<br />
-            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 drop-shadow-sm">A gente resolve hoje.</span>
+            <span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 drop-shadow-sm">A gente resolve hoje.</span>
           </h1>
           
-          <p className="text-[clamp(16px,2vw,20px)] text-gray-500 mb-10 leading-relaxed">
-            Assistência técnica especializada em iPhone em João Pessoa.<br className="hidden md:block" />
+          <p className="text-base sm:text-lg text-gray-500 mb-10 leading-[1.6] font-normal text-left md:text-center">
+            Assistência técnica especializada em iPhone em João Pessoa.<br className="hidden sm:block" />
             Diagnóstico rápido, peça de qualidade e garantia por escrito.
           </p>
 
           {/* Bullets */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 mb-12 w-full">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center gap-4 md:gap-8 mb-12 w-full md:w-fit md:mx-auto">
             {[
               'Orçamento pelo WhatsApp em minutos',
               'Reparo rápido',
               'Garantia real'
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2.5 text-gray-700 font-medium text-base">
+              <div key={index} className="flex items-center gap-3 text-gray-600 font-medium text-sm sm:text-base">
                 <CheckCircle2 size={20} className="text-green-500 flex-shrink-0" strokeWidth={2.5} />
                 <span>{item}</span>
               </div>
@@ -46,7 +46,7 @@ export function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start md:justify-center gap-4 w-full sm:w-auto">
             <a 
               href="#contato"
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gray-900 to-black text-white rounded-full text-base font-semibold hover:shadow-lg hover:shadow-black/10 transition-all flex items-center justify-center min-h-[56px]"
@@ -54,7 +54,7 @@ export function Hero() {
               Solicitar orçamento agora
             </a>
             <a 
-              href="https://wa.me/5583999999999"
+              href="https://wa.me/558386044833"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-transparent text-gray-900 border border-gray-200 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors flex items-center justify-center gap-2 min-h-[56px]"

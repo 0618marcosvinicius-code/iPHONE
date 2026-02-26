@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Smartphone, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,41 +50,34 @@ export function Header() {
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="relative flex items-center justify-between h-20">
             {/* Logo */}
             <div 
-              className="flex items-center gap-2.5 cursor-pointer"
+              className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center cursor-pointer z-10 h-8 lg:h-10 transition-all duration-300"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <div className="bg-black text-white p-2 rounded-xl flex items-center justify-center">
-                <Smartphone size={22} strokeWidth={1.5} />
-              </div>
-              <span className="font-semibold text-xl tracking-tight text-gray-900">
-                Casa do Phone
-              </span>
+              <Logo className="h-full text-gray-900" />
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={(e) => handleNavClick(e, item.toLowerCase())}
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
-
-            {/* Desktop CTA & Mobile Menu Toggle */}
-            <div className="flex items-center gap-4">
+            {/* Desktop Navigation & CTA */}
+            <div className="hidden lg:flex items-center gap-8 ml-auto">
+              <nav className="flex items-center space-x-8">
+                {navItems.map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    onClick={(e) => handleNavClick(e, item.toLowerCase())}
+                    className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </nav>
               <a 
-                href="https://wa.me/5583999999999" 
+                href="https://wa.me/558386044833" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hidden md:flex bg-gradient-to-r from-gray-900 to-black text-white px-6 py-3 rounded-full text-sm font-medium hover:shadow-md hover:shadow-black/10 transition-all items-center gap-2"
+                className="flex bg-gradient-to-r from-gray-900 to-black text-white px-6 py-3 rounded-full text-sm font-medium hover:shadow-md hover:shadow-black/10 transition-all items-center gap-2"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -91,10 +85,12 @@ export function Header() {
                 </span>
                 Orçamento em 5 Min
               </a>
-              
-              {/* Mobile menu button */}
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <div className="lg:hidden flex items-center ml-auto z-10">
               <button 
-                className="md:hidden text-gray-900 hover:text-gray-600 focus:outline-none p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
+                className="text-gray-900 hover:text-gray-600 focus:outline-none p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
                 onClick={() => setIsMenuOpen(true)}
                 aria-label="Abrir menu"
               >
@@ -142,7 +138,7 @@ export function Header() {
 
             <div className="p-4 sm:p-6 border-t border-gray-100 bg-gray-50/50">
               <a 
-                href="https://wa.me/5583999999999" 
+                href="https://wa.me/558386044833" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-gray-900 to-black text-white px-6 py-4 rounded-full text-base font-medium hover:shadow-md hover:shadow-black/10 transition-all min-h-[56px]"

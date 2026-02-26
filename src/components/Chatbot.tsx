@@ -40,7 +40,7 @@ Informações importantes:
 - Horário: Segunda a Sexta das 09h às 18h, Sábado das 09h às 13h.
 - Serviços: Troca de tela, bateria, conector de carga, reparo em placa, desoxidação, software.
 - Diferenciais: Orçamento rápido pelo WhatsApp, reparo rápido, garantia por escrito (+7 anos de experiência, +5k aparelhos reparados).
-- Contato: WhatsApp (83) 99999-9999.
+- Contato: WhatsApp (83) 8604-4833.
 Sempre incentive o cliente a chamar no WhatsApp para orçamentos exatos. Seja conciso e amigável.`,
         },
       });
@@ -62,7 +62,7 @@ Informações importantes:
 - Horário: Segunda a Sexta das 09h às 18h, Sábado das 09h às 13h.
 - Serviços: Troca de tela, bateria, conector de carga, reparo em placa, desoxidação, software.
 - Diferenciais: Orçamento rápido pelo WhatsApp, reparo rápido, garantia por escrito (+7 anos de experiência, +5k aparelhos reparados).
-- Contato: WhatsApp (83) 99999-9999.
+- Contato: WhatsApp (83) 8604-4833.
 Sempre incentive o cliente a chamar no WhatsApp para orçamentos exatos. Seja conciso e amigável.`,
           },
         });

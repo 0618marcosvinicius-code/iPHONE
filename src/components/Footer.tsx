@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Facebook, MapPin, Phone, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,10 +13,7 @@ export function Footer() {
           {/* Brand & About */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-xl">C</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">Casa do Phone</span>
+              <Logo className="h-10 text-white" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Assistência técnica especializada em iPhone em João Pessoa. Diagnóstico rápido, peça de qualidade e garantia por escrito.
@@ -73,7 +71,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-gray-500 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">(83) 99999-9999</span>
+                <span className="text-gray-400 text-sm">(83) 8604-4833</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gray-500 flex-shrink-0" />
