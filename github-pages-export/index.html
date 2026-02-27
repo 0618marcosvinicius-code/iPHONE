@@ -1,0 +1,1352 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Casa do Phone - Assistência Técnica Especializada em iPhone em João Pessoa
+    </title>
+    <meta
+      name="description"
+      content="Assistência técnica especializada em iPhone em João Pessoa. Diagnóstico rápido, peça de qualidade e garantia por escrito."
+    />
+    <meta
+      property="og:title"
+      content="Casa do Phone - Assistência Técnica de iPhone"
+    />
+    <meta
+      property="og:description"
+      content="Especialistas em iPhone em João Pessoa. Reparo rápido e com garantia."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300 border-b border-transparent"
+    >
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center cursor-pointer z-10 h-8 lg:h-10 transition-all duration-300"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            <svg
+              viewBox="0 0 360 80"
+              class="h-full text-gray-900"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M 50 35 L 85 5 L 145 35 L 195 35"
+                stroke="currentColor"
+                stroke-width="8"
+                stroke-linejoin="miter"
+                stroke-linecap="square"
+                fill="none"
+              />
+              <text
+                x="10"
+                y="72"
+                font-family="system-ui, -apple-system, sans-serif"
+                font-weight="900"
+                font-size="48"
+                fill="currentColor"
+                letter-spacing="-2"
+              >
+                CASA
+              </text>
+              <text
+                x="135"
+                y="72"
+                font-family="system-ui, -apple-system, sans-serif"
+                font-weight="900"
+                font-size="48"
+                fill="currentColor"
+                letter-spacing="-2"
+              >
+                DO
+              </text>
+              <text
+                x="205"
+                y="72"
+                font-family="system-ui, -apple-system, sans-serif"
+                font-weight="900"
+                font-size="48"
+                fill="currentColor"
+                letter-spacing="-2"
+              >
+                PHONE
+              </text>
+            </svg>
+          </div>
+
+          <!-- Desktop Nav -->
+          <div class="hidden lg:flex items-center gap-8 ml-auto">
+            <nav class="flex items-center space-x-8">
+              <a
+                href="#serviços"
+                class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
+                >Serviços</a
+              >
+              <a
+                href="#avaliações"
+                class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
+                >Avaliações</a
+              >
+              <a
+                href="#garantia"
+                class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
+                >Garantia</a
+              >
+              <a
+                href="#localizacao"
+                class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors py-2"
+                >Localização</a
+              >
+            </nav>
+            <a
+              href="https://wa.me/558386044833"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex bg-gradient-to-r from-gray-900 to-black text-white px-6 py-3 rounded-full text-sm font-medium hover:shadow-md hover:shadow-black/10 transition-all items-center gap-2"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+                ></span>
+              </span>
+              Orçamento em 5 Min
+            </a>
+          </div>
+
+          <!-- Mobile Menu Btn -->
+          <div class="lg:hidden flex items-center ml-auto z-10">
+            <button
+              id="menu-btn"
+              class="text-gray-900 hover:text-gray-600 focus:outline-none p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
+              aria-label="Abrir menu"
+            >
+              <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden lg:hidden">
+      <div
+        id="menu-backdrop"
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+      ></div>
+      <div
+        class="absolute top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl flex flex-col border-l border-gray-100"
+      >
+        <div
+          class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-100"
+        >
+          <span class="font-semibold text-lg tracking-tight text-gray-900"
+            >Menu</span
+          >
+          <button
+            id="close-menu-btn"
+            class="p-2 text-gray-500 hover:text-gray-900 bg-gray-50 rounded-full flex items-center justify-center min-h-[44px] min-w-[44px]"
+            aria-label="Fechar menu"
+          >
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <div
+          class="flex-1 overflow-y-auto py-6 px-4 sm:px-6 flex flex-col gap-2"
+        >
+          <a
+            href="#serviços"
+            class="mobile-nav-link flex items-center min-h-[56px] px-4 text-base font-medium text-gray-600 rounded-2xl hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            >Serviços</a
+          >
+          <a
+            href="#avaliações"
+            class="mobile-nav-link flex items-center min-h-[56px] px-4 text-base font-medium text-gray-600 rounded-2xl hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            >Avaliações</a
+          >
+          <a
+            href="#garantia"
+            class="mobile-nav-link flex items-center min-h-[56px] px-4 text-base font-medium text-gray-600 rounded-2xl hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            >Garantia</a
+          >
+          <a
+            href="#localizacao"
+            class="mobile-nav-link flex items-center min-h-[56px] px-4 text-base font-medium text-gray-600 rounded-2xl hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            >Localização</a
+          >
+        </div>
+        <div class="p-4 sm:p-6 border-t border-gray-100 bg-gray-50/50">
+          <a
+            href="https://wa.me/558386044833"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-gray-900 to-black text-white px-6 py-4 rounded-full text-base font-medium hover:shadow-md hover:shadow-black/10 transition-all min-h-[56px]"
+          >
+            <span class="relative flex h-2.5 w-2.5">
+              <span
+                class="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"
+              ></span>
+            </span>
+            Orçamento em 5 Min
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center pt-20 overflow-hidden bg-white"
+      >
+        <div
+          class="absolute inset-0 w-full h-full pointer-events-none flex items-center justify-center"
+        >
+          <img
+            src="https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg"
+            alt="iPhone 15 Pro"
+            class="w-full h-full object-cover opacity-50"
+            referrerpolicy="no-referrer"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white"
+          ></div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-blue-50/80 to-purple-50/80 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div
+          class="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 text-left md:text-center flex flex-col items-start md:items-center py-14 md:py-20"
+        >
+          <div
+            class="max-w-[680px] mx-auto flex flex-col items-start md:items-center"
+          >
+            <h1
+              class="text-4xl sm:text-5xl md:text-6xl font-medium text-gray-900 tracking-tight leading-[1.1] mb-6 text-left md:text-center fade-in"
+            >
+              Quebrou? Não carrega?<br />
+              <span
+                class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 drop-shadow-sm"
+                >A gente resolve hoje.</span
+              >
+            </h1>
+            <p
+              class="text-base sm:text-lg text-gray-500 mb-10 leading-[1.6] font-normal text-left md:text-center fade-in"
+              style="transition-delay: 100ms"
+            >
+              Assistência técnica especializada em iPhone em João Pessoa.<br
+                class="hidden sm:block"
+              />
+              Diagnóstico rápido, peça de qualidade e garantia por escrito.
+            </p>
+            <div
+              class="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center gap-4 md:gap-8 mb-12 w-full md:w-fit md:mx-auto fade-in"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="flex items-center gap-3 text-gray-600 font-medium text-sm sm:text-base"
+              >
+                <i
+                  data-lucide="check-circle-2"
+                  class="text-green-500 flex-shrink-0 w-5 h-5"
+                ></i>
+                <span>Orçamento pelo WhatsApp em minutos</span>
+              </div>
+              <div
+                class="flex items-center gap-3 text-gray-600 font-medium text-sm sm:text-base"
+              >
+                <i
+                  data-lucide="check-circle-2"
+                  class="text-green-500 flex-shrink-0 w-5 h-5"
+                ></i>
+                <span>Reparo rápido</span>
+              </div>
+              <div
+                class="flex items-center gap-3 text-gray-600 font-medium text-sm sm:text-base"
+              >
+                <i
+                  data-lucide="check-circle-2"
+                  class="text-green-500 flex-shrink-0 w-5 h-5"
+                ></i>
+                <span>Garantia real</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row items-stretch sm:items-center justify-start md:justify-center gap-4 w-full sm:w-auto fade-in"
+              style="transition-delay: 300ms"
+            >
+              <a
+                href="#orcamento"
+                class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gray-900 to-black text-white rounded-full text-base font-semibold hover:shadow-lg hover:shadow-black/10 transition-all flex items-center justify-center min-h-[56px]"
+              >
+                Solicitar orçamento agora
+              </a>
+              <a
+                href="https://wa.me/558386044833"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto px-8 py-4 bg-transparent text-gray-900 border border-gray-200 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors flex items-center justify-center gap-2 min-h-[56px]"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-green-500"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  />
+                </svg>
+                Falar direto no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise -->
+      <section
+        class="py-14 md:py-20 lg:py-24 bg-[#F5F6F8] border-t border-gray-100"
+        id="sobre"
+      >
+        <div
+          class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in"
+        >
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-6"
+          >
+            Especialistas em iPhone em João Pessoa.
+          </h2>
+          <p
+            class="text-lg md:text-xl text-gray-500 leading-relaxed mb-16 md:mb-20 max-w-3xl mx-auto"
+          >
+            Trabalhamos exclusivamente com dispositivos Apple, oferecendo
+            diagnóstico técnico preciso, transparência no orçamento e reparos
+            realizados com padrão profissional.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            <div class="flex flex-col items-center">
+              <span
+                class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter text-gray-900 mb-4"
+                >+5k</span
+              >
+              <span
+                class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-widest"
+                >Aparelhos Reparados</span
+              >
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter text-gray-900 mb-4"
+                >+7</span
+              >
+              <span
+                class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-widest"
+                >Anos de Experiência</span
+              >
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter text-gray-900 mb-4"
+                >100%</span
+              >
+              <span
+                class="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-widest"
+                >Garantia por Escrito</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        class="py-14 md:py-20 lg:py-24 bg-white border-t border-gray-100"
+        id="serviços"
+      >
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20 fade-in">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-6"
+            >
+              Nossos Serviços
+            </h2>
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+              Soluções precisas para cada tipo de problema. Diagnóstico
+              transparente e reparo com padrão de qualidade Apple.
+            </p>
+          </div>
+          <div class="relative fade-in">
+            <button
+              id="btn-prev"
+              class="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+            >
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button
+              id="btn-next"
+              class="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+            >
+              <i data-lucide="chevron-right"></i>
+            </button>
+
+            <div
+              id="services-carousel"
+              class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 hide-scrollbar"
+            >
+              <!-- Service 1 -->
+              <div
+                class="min-w-[85vw] sm:min-w-[350px] lg:min-w-[calc(33.333%-16px)] snap-center p-8 sm:p-10 rounded-3xl transition-all duration-300 group border border-gray-100 hover:border-gray-200 flex flex-col h-full bg-[#F5F6F8] hover:shadow-lg hover:shadow-gray-200/50"
+              >
+                <div
+                  class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-gray-900 shadow-sm border border-gray-100 mb-6"
+                >
+                  <i data-lucide="smartphone" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                  Troca de Tela
+                </h3>
+                <div class="space-y-6 mb-10 flex-1">
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i
+                        data-lucide="alert-circle"
+                        class="w-4 h-4 text-gray-400"
+                      ></i>
+                      Sintomas
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">
+                      Vidro trincado, touch falhando, manchas ou listras na
+                      imagem.
+                    </p>
+                  </div>
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                      Tempo Médio
+                    </div>
+                    <p class="text-gray-500">40 minutos</p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/558386044833"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors mt-auto min-h-[44px]"
+                  >Solicitar orçamento</a
+                >
+              </div>
+              <!-- Service 2 -->
+              <div
+                class="min-w-[85vw] sm:min-w-[350px] lg:min-w-[calc(33.333%-16px)] snap-center p-8 sm:p-10 rounded-3xl transition-all duration-300 group border border-gray-100 hover:border-gray-200 flex flex-col h-full bg-[#F5F6F8] hover:shadow-lg hover:shadow-gray-200/50"
+              >
+                <div
+                  class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-gray-900 shadow-sm border border-gray-100 mb-6"
+                >
+                  <i data-lucide="battery" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                  Substituição de Bateria
+                </h3>
+                <div class="space-y-6 mb-10 flex-1">
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i
+                        data-lucide="alert-circle"
+                        class="w-4 h-4 text-gray-400"
+                      ></i>
+                      Sintomas
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">
+                      Descarregando rápido, desligando sozinho, bateria
+                      estufada.
+                    </p>
+                  </div>
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                      Tempo Médio
+                    </div>
+                    <p class="text-gray-500">30 minutos</p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/558386044833"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors mt-auto min-h-[44px]"
+                  >Solicitar orçamento</a
+                >
+              </div>
+              <!-- Service 3 -->
+              <div
+                class="min-w-[85vw] sm:min-w-[350px] lg:min-w-[calc(33.333%-16px)] snap-center p-8 sm:p-10 rounded-3xl transition-all duration-300 group border border-gray-100 hover:border-gray-200 flex flex-col h-full bg-[#F5F6F8] hover:shadow-lg hover:shadow-gray-200/50"
+              >
+                <div
+                  class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-gray-900 shadow-sm border border-gray-100 mb-6"
+                >
+                  <i data-lucide="cable" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                  Conector de Carga
+                </h3>
+                <div class="space-y-6 mb-10 flex-1">
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i
+                        data-lucide="alert-circle"
+                        class="w-4 h-4 text-gray-400"
+                      ></i>
+                      Sintomas
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">
+                      Não carrega, mau contato no cabo, acessório não suportado.
+                    </p>
+                  </div>
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                      Tempo Médio
+                    </div>
+                    <p class="text-gray-500">45 minutos</p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/558386044833"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors mt-auto min-h-[44px]"
+                  >Solicitar orçamento</a
+                >
+              </div>
+              <!-- Service 4 -->
+              <div
+                class="min-w-[85vw] sm:min-w-[350px] lg:min-w-[calc(33.333%-16px)] snap-center p-8 sm:p-10 rounded-3xl transition-all duration-300 group border border-gray-100 hover:border-gray-200 flex flex-col h-full bg-[#F5F6F8] hover:shadow-lg hover:shadow-gray-200/50"
+              >
+                <div
+                  class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-gray-900 shadow-sm border border-gray-100 mb-6"
+                >
+                  <i data-lucide="cpu" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                  Reparo em Placa
+                </h3>
+                <div class="space-y-6 mb-10 flex-1">
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i
+                        data-lucide="alert-circle"
+                        class="w-4 h-4 text-gray-400"
+                      ></i>
+                      Sintomas
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">
+                      Aparelho não liga, sem sinal de rede, falha no áudio
+                      (Codec).
+                    </p>
+                  </div>
+                  <div>
+                    <div
+                      class="flex items-center gap-2 text-sm font-medium text-gray-900 mb-2 uppercase tracking-wider"
+                    >
+                      <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                      Tempo Médio
+                    </div>
+                    <p class="text-gray-500">1 a 3 dias</p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/558386044833"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors mt-auto min-h-[44px]"
+                  >Solicitar orçamento</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Urgency -->
+      <section
+        class="py-14 md:py-20 lg:py-24 bg-[#16181D] border-t border-gray-900 fade-in"
+      >
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div
+            class="inline-flex items-center justify-center p-4 bg-white/5 rounded-2xl shadow-sm border border-white/10 mb-8"
+          >
+            <i data-lucide="alert-triangle" class="text-white w-8 h-8"></i>
+          </div>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-8"
+          >
+            Seu iPhone não pode parar.
+          </h2>
+          <div
+            class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto mb-12 space-y-6"
+          >
+            <p>
+              Tela quebrada, bateria acabando rápido, celular que não carrega ou
+              molhou.<br class="hidden md:block" />
+              <strong class="font-medium text-white"
+                >Quanto mais você espera, maior pode ser o dano.</strong
+              >
+            </p>
+            <p>
+              Aqui o diagnóstico é preciso e o reparo é feito com padrão
+              profissional.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/558386044833"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-full text-base font-medium hover:bg-gray-200 transition-all shadow-lg shadow-black/20 min-h-[56px] w-full sm:w-auto"
+            >Resolver agora</a
+          >
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section
+        class="py-14 md:py-20 lg:py-24 bg-white border-t border-gray-100 fade-in"
+        id="processo"
+      >
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-6"
+            >
+              Sem complicação.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+              Transparência total antes de qualquer serviço.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            <div
+              class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px bg-gray-200 -z-10"
+            ></div>
+            <div class="flex flex-col items-center text-center relative h-full">
+              <div
+                class="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 mb-8 shadow-sm border border-gray-100 relative z-10"
+              >
+                <i data-lucide="message-circle" class="w-8 h-8"></i>
+                <div
+                  class="absolute -top-2 -right-2 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-sm font-bold border-4 border-white"
+                >
+                  1
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                Você chama no WhatsApp
+              </h3>
+              <p class="text-gray-500 leading-relaxed max-w-xs flex-1">
+                Nosso atendimento é rápido e direto. Relate o problema do seu
+                iPhone e tire suas dúvidas.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center relative h-full">
+              <div
+                class="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 mb-8 shadow-sm border border-gray-100 relative z-10"
+              >
+                <i data-lucide="search" class="w-8 h-8"></i>
+                <div
+                  class="absolute -top-2 -right-2 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-sm font-bold border-4 border-white"
+                >
+                  2
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                Recebe diagnóstico e valor
+              </h3>
+              <p class="text-gray-500 leading-relaxed max-w-xs flex-1">
+                Avaliamos a situação e passamos o orçamento completo, sem letras
+                miúdas ou surpresas.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center relative h-full">
+              <div
+                class="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 mb-8 shadow-sm border border-gray-100 relative z-10"
+              >
+                <i data-lucide="shield-check" class="w-8 h-8"></i>
+                <div
+                  class="absolute -top-2 -right-2 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-sm font-bold border-4 border-white"
+                >
+                  3
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                Reparo + teste + garantia
+              </h3>
+              <p class="text-gray-500 leading-relaxed max-w-xs flex-1">
+                Executamos o serviço, testamos todas as funções e entregamos com
+                garantia por escrito.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quiz Form -->
+      <section
+        class="py-14 md:py-20 lg:py-24 bg-white border-t border-gray-100 fade-in"
+        id="orcamento"
+      >
+        <div class="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2
+              class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-4"
+            >
+              Descubra o valor do seu reparo
+            </h2>
+            <p class="text-lg text-gray-500">
+              Responda rápido e receba seu orçamento direto no WhatsApp.
+            </p>
+          </div>
+          <div
+            class="bg-[#F5F6F8] rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100"
+          >
+            <div class="flex items-center justify-between mb-8 relative">
+              <div
+                class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 rounded-full -z-10"
+              ></div>
+              <div
+                id="quiz-progress"
+                class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gray-900 rounded-full -z-10 transition-all duration-300"
+                style="width: 0%"
+              ></div>
+              <div
+                class="quiz-indicator w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors bg-gray-900 text-white"
+              >
+                1
+              </div>
+              <div
+                class="quiz-indicator w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors bg-gray-200 text-gray-500"
+              >
+                2
+              </div>
+              <div
+                class="quiz-indicator w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors bg-gray-200 text-gray-500"
+              >
+                3
+              </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div
+              id="quiz-step-1"
+              class="animate-in fade-in slide-in-from-right-4 duration-300"
+            >
+              <h3 class="text-xl font-semibold text-gray-900 mb-6 text-center">
+                Qual serviço você precisa?
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <button
+                  data-service="Troca de Tela"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="smartphone"></i>
+                  </div>
+                  <span class="font-medium text-gray-900">Troca de Tela</span>
+                </button>
+                <button
+                  data-service="Troca de Bateria"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="battery"></i>
+                  </div>
+                  <span class="font-medium text-gray-900"
+                    >Troca de Bateria</span
+                  >
+                </button>
+                <button
+                  data-service="Conector de Carga"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="cable"></i>
+                  </div>
+                  <span class="font-medium text-gray-900"
+                    >Conector de Carga</span
+                  >
+                </button>
+                <button
+                  data-service="Reparo em Placa"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="cpu"></i>
+                  </div>
+                  <span class="font-medium text-gray-900">Reparo em Placa</span>
+                </button>
+                <button
+                  data-service="Desoxidação"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="droplets"></i>
+                  </div>
+                  <span class="font-medium text-gray-900">Desoxidação</span>
+                </button>
+                <button
+                  data-service="Outro"
+                  class="service-btn flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all text-left group"
+                >
+                  <div
+                    class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-900 group-hover:text-white transition-colors"
+                  >
+                    <i data-lucide="wrench"></i>
+                  </div>
+                  <span class="font-medium text-gray-900">Outro Serviço</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <form
+              id="form-step-2"
+              class="hidden animate-in fade-in slide-in-from-right-4 duration-300"
+            >
+              <h3 class="text-xl font-semibold text-gray-900 mb-6 text-center">
+                Qual o modelo do seu aparelho?
+              </h3>
+              <div class="mb-8">
+                <label
+                  for="model-input"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Modelo (Ex: iPhone 13 Pro)</label
+                >
+                <input
+                  type="text"
+                  id="model-input"
+                  required
+                  class="w-full px-4 py-4 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-900 transition-all text-lg"
+                  placeholder="Digite o modelo..."
+                />
+              </div>
+              <div class="flex gap-4">
+                <button
+                  type="button"
+                  id="btn-back-1"
+                  class="px-6 py-4 bg-white border border-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition-colors"
+                >
+                  Voltar
+                </button>
+                <button
+                  type="submit"
+                  id="btn-next-step"
+                  disabled
+                  class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Próximo passo
+                  <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+            </form>
+
+            <!-- Step 3 -->
+            <form
+              id="form-step-3"
+              class="hidden animate-in fade-in slide-in-from-right-4 duration-300"
+            >
+              <h3 class="text-xl font-semibold text-gray-900 mb-6 text-center">
+                Para onde enviamos o orçamento?
+              </h3>
+              <div class="space-y-4 mb-8">
+                <div>
+                  <label
+                    for="name-input"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nome Completo</label
+                  >
+                  <input
+                    type="text"
+                    id="name-input"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-900 transition-all"
+                    placeholder="Seu nome"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email-input"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    id="email-input"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-900 transition-all"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone-input"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >WhatsApp</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone-input"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-900 transition-all"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <button
+                  type="button"
+                  id="btn-back-2"
+                  class="px-6 py-4 bg-white border border-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition-colors"
+                >
+                  Voltar
+                </button>
+                <button
+                  type="submit"
+                  class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#25D366] text-white rounded-full font-medium hover:bg-[#20bd5a] transition-colors shadow-lg shadow-[#25D366]/20"
+                >
+                  Receber Orçamento no WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="py-14 md:py-20 lg:py-24 bg-[#0E0E11] border-t border-gray-900 fade-in" id="avaliações">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">Quem já trouxe, recomenda.</h2>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">A satisfação dos nossos clientes é a nossa maior garantia. Veja o que dizem sobre o nosso trabalho e conheça nossa estrutura.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div class="flex items-center gap-2 bg-[#16181D] px-5 py-2.5 rounded-full border border-white/5 shadow-sm w-full sm:w-auto justify-center">
+                <i data-lucide="check-circle-2" class="text-green-400 flex-shrink-0 w-4 h-4"></i>
+                <span class="text-sm font-medium text-gray-200">+5.000 aparelhos reparados</span>
+              </div>
+              <div class="flex items-center gap-2 bg-[#16181D] px-5 py-2.5 rounded-full border border-white/5 shadow-sm w-full sm:w-auto justify-center">
+                <i data-lucide="map-pin" class="text-blue-400 flex-shrink-0 w-4 h-4"></i>
+                <span class="text-sm font-medium text-gray-200">7 anos atendendo João Pessoa</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div class="flex flex-col gap-8">
+              <div class="bg-[#16181D] p-6 md:p-8 rounded-3xl shadow-sm border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="text-center sm:text-left">
+                  <div class="flex items-center justify-center sm:justify-start gap-2 mb-2">
+                    <span class="text-3xl font-bold text-white">5.0</span>
+                    <div class="flex text-yellow-400">
+                      <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                      <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                      <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                      <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                      <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    </div>
+                  </div>
+                  <p class="text-sm font-medium text-gray-400">Baseado em mais de 300 avaliações no Google</p>
+                </div>
+                <button class="w-full sm:w-auto px-6 py-3 bg-white/10 text-white border border-white/20 rounded-full text-sm font-medium hover:bg-white/20 transition-colors whitespace-nowrap min-h-[44px]">Avaliar no Google</button>
+              </div>
+              <div class="grid gap-6">
+                <!-- Review 1 -->
+                <div class="bg-[#16181D] p-6 md:p-8 rounded-3xl shadow-lg shadow-black/20 border border-white/5">
+                  <div class="flex text-yellow-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed mb-6">"Serviço impecável! Meu iPhone 13 caiu na água e achei que tinha perdido tudo. Eles recuperaram a placa e o aparelho voltou a funcionar perfeitamente. Atendimento super transparente."</p>
+                  <div class="flex justify-between items-center">
+                    <span class="font-medium text-white">Mariana Silva</span>
+                    <span class="text-sm text-gray-500">há 2 semanas</span>
+                  </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-[#16181D] p-6 md:p-8 rounded-3xl shadow-lg shadow-black/20 border border-white/5">
+                  <div class="flex text-yellow-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed mb-6">"Troquei a bateria do meu iPhone 11 e parece que comprei um celular novo. Fizeram na hora, em menos de 40 minutos. Recomendo de olhos fechados!"</p>
+                  <div class="flex justify-between items-center">
+                    <span class="font-medium text-white">Carlos Eduardo</span>
+                    <span class="text-sm text-gray-500">há 1 mês</span>
+                  </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-[#16181D] p-6 md:p-8 rounded-3xl shadow-lg shadow-black/20 border border-white/5">
+                  <div class="flex text-yellow-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed mb-6">"A melhor assistência de João Pessoa. Levei para trocar a tela e o True Tone continuou funcionando perfeitamente. Ambiente limpo e profissionais muito educados."</p>
+                  <div class="flex justify-between items-center">
+                    <span class="font-medium text-white">Fernanda Costa</span>
+                    <span class="text-sm text-gray-500">há 2 meses</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4">
+                <a href="https://wa.me/558386044833" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-full text-base font-medium hover:bg-gray-200 transition-all shadow-lg shadow-black/20 w-full sm:w-auto min-h-[56px]">Quero meu orçamento</a>
+              </div>
+            </div>
+            <div class="sticky top-32">
+              <div class="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden bg-[#16181D] shadow-2xl shadow-black/50 group border border-white/5">
+                <!-- Photo 1 -->
+                <div class="review-photo absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10">
+                  <img src="https://smartback.com.br/upload/service/KbTSc7KLJCgYVaJX4UITiGM2cRdk20koTiBAM9in.jpeg" alt="Nossa bancada técnica com equipamentos de precisão" class="w-full h-full object-cover" loading="lazy" referrerpolicy="no-referrer" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <p class="text-white text-base md:text-lg font-medium tracking-wide">Nossa bancada técnica com equipamentos de precisão</p>
+                  </div>
+                </div>
+                <!-- Photo 2 -->
+                <div class="review-photo absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+                  <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" alt="Microsoldagem avançada em placa lógica" class="w-full h-full object-cover" loading="lazy" referrerpolicy="no-referrer" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <p class="text-white text-base md:text-lg font-medium tracking-wide">Microsoldagem avançada em placa lógica</p>
+                  </div>
+                </div>
+                <!-- Photo 3 -->
+                <div class="review-photo absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+                  <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop" alt="Antes e Depois: Troca de vidro traseiro" class="w-full h-full object-cover" loading="lazy" referrerpolicy="no-referrer" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <p class="text-white text-base md:text-lg font-medium tracking-wide">Antes e Depois: Troca de vidro traseiro</p>
+                  </div>
+                </div>
+                <button id="btn-review-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/30 min-h-[44px] min-w-[44px]" aria-label="Foto anterior"><i data-lucide="chevron-left"></i></button>
+                <button id="btn-review-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/30 min-h-[44px] min-w-[44px]" aria-label="Próxima foto"><i data-lucide="chevron-right"></i></button>
+                <div class="absolute top-6 left-0 right-0 z-20 flex justify-center gap-2">
+                  <button class="review-indicator h-1.5 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center w-8 bg-white" aria-label="Ir para foto 1"><span class="sr-only">Foto 1</span></button>
+                  <button class="review-indicator h-1.5 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center w-2 bg-white/50 hover:bg-white/75" aria-label="Ir para foto 2"><span class="sr-only">Foto 2</span></button>
+                  <button class="review-indicator h-1.5 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center w-2 bg-white/50 hover:bg-white/75" aria-label="Ir para foto 3"><span class="sr-only">Foto 3</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Warranty -->
+      <section class="py-14 md:py-20 lg:py-24 bg-[#F5F6F8] border-t border-gray-100 fade-in" id="garantia">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="inline-flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm border border-gray-100 mb-8">
+            <i data-lucide="shield-check" class="text-gray-900 w-8 h-8"></i>
+          </div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-6">Garantia real. Sem enrolação.</h2>
+          <div class="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto mb-12 space-y-2">
+            <p>Você recebe garantia por escrito no reparo realizado.</p>
+            <p>Transparência sobre peça e serviço.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-12">
+            <div class="flex items-center gap-2 text-gray-700 font-medium bg-white px-5 py-2.5 rounded-full border border-gray-200 shadow-sm w-full sm:w-auto justify-center">
+              <i data-lucide="check-circle-2" class="text-green-500 flex-shrink-0 w-5 h-5"></i>
+              <span class="text-sm">Atendimento seguro</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-700 font-medium bg-white px-5 py-2.5 rounded-full border border-gray-200 shadow-sm w-full sm:w-auto justify-center">
+              <i data-lucide="check-circle-2" class="text-green-500 flex-shrink-0 w-5 h-5"></i>
+              <span class="text-sm">Peças de qualidade</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-700 font-medium bg-white px-5 py-2.5 rounded-full border border-gray-200 shadow-sm w-full sm:w-auto justify-center">
+              <i data-lucide="check-circle-2" class="text-green-500 flex-shrink-0 w-5 h-5"></i>
+              <span class="text-sm">Suporte pós-serviço</span>
+            </div>
+          </div>
+          <a href="https://wa.me/558386044833" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-gray-900 to-black text-white rounded-full text-base font-medium hover:shadow-lg hover:shadow-black/10 transition-all min-h-[56px] w-full sm:w-auto">Quero atendimento seguro</a>
+        </div>
+      </section>
+
+      <!-- LocationFAQ -->
+      <section class="py-14 md:py-20 lg:py-24 bg-[#15161A] border-t border-white/5 fade-in" id="localizacao">
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div>
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">Assistência técnica de iPhone em João Pessoa.</h2>
+              <div class="prose prose-lg text-gray-400 leading-relaxed">
+                <p class="mb-6 text-lg md:text-xl">Se você pesquisou por conserto de iPhone em João Pessoa, troca de tela, bateria ou reparo rápido, a Casa do Phone está pronta para atender.</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold tracking-tight text-white mb-8">Perguntas Frequentes</h3>
+              <div class="space-y-4">
+                <div class="border border-white/5 rounded-2xl overflow-hidden bg-[#0B0B0D] transition-colors hover:border-white/20">
+                  <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none min-h-[60px]">
+                    <span class="font-medium text-white pr-4">Troca na hora?</span>
+                    <i data-lucide="chevron-down" class="faq-icon text-gray-500 transition-transform duration-300 flex-shrink-0"></i>
+                  </button>
+                  <div class="px-6 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                    <p class="text-gray-400 leading-relaxed">Sim, a maioria dos serviços como troca de bateria e tela são realizados em até 40 minutos, enquanto você aguarda em nosso espaço confortável.</p>
+                  </div>
+                </div>
+                <div class="border border-white/5 rounded-2xl overflow-hidden bg-[#0B0B0D] transition-colors hover:border-white/20">
+                  <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none min-h-[60px]">
+                    <span class="font-medium text-white pr-4">Perco meus dados?</span>
+                    <i data-lucide="chevron-down" class="faq-icon text-gray-500 transition-transform duration-300 flex-shrink-0"></i>
+                  </button>
+                  <div class="px-6 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                    <p class="text-gray-400 leading-relaxed">Não. Em 99% dos casos, como trocas de tela, bateria ou conectores, seus dados permanecem intactos. Recomendamos o backup apenas por precaução.</p>
+                  </div>
+                </div>
+                <div class="border border-white/5 rounded-2xl overflow-hidden bg-[#0B0B0D] transition-colors hover:border-white/20">
+                  <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none min-h-[60px]">
+                    <span class="font-medium text-white pr-4">Tem garantia?</span>
+                    <i data-lucide="chevron-down" class="faq-icon text-gray-500 transition-transform duration-300 flex-shrink-0"></i>
+                  </button>
+                  <div class="px-6 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                    <p class="text-gray-400 leading-relaxed">Sim! Oferecemos garantia formal por escrito em todos os nossos reparos, garantindo a qualidade da peça e do serviço prestado.</p>
+                  </div>
+                </div>
+                <div class="border border-white/5 rounded-2xl overflow-hidden bg-[#0B0B0D] transition-colors hover:border-white/20">
+                  <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none min-h-[60px]">
+                    <span class="font-medium text-white pr-4">Quanto custa?</span>
+                    <i data-lucide="chevron-down" class="faq-icon text-gray-500 transition-transform duration-300 flex-shrink-0"></i>
+                  </button>
+                  <div class="px-6 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                    <p class="text-gray-400 leading-relaxed">O valor depende do modelo do seu iPhone e do tipo de reparo. Fale conosco no WhatsApp para receber um orçamento rápido, transparente e sem compromisso.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer & Contact -->
+      <footer
+        class="bg-[#0B0B0D] border-t border-white/5 pt-14 md:pt-20 pb-8"
+        id="contato"
+      >
+        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16"
+          >
+            <div>
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-12"
+              >
+                Venha tomar um café com a gente.
+              </h2>
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 bg-[#15161A] rounded-2xl flex items-center justify-center text-white shadow-sm border border-white/10 flex-shrink-0"
+                  >
+                    <i data-lucide="map-pin"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">
+                      Endereço
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed">
+                      Av. Esperança, 1234 - Manaíra<br />João Pessoa - PB,
+                      58038-280
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 bg-[#15161A] rounded-2xl flex items-center justify-center text-white shadow-sm border border-white/10 flex-shrink-0"
+                  >
+                    <i data-lucide="clock"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">
+                      Horário de Funcionamento
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed">
+                      Segunda a Sexta: 09h às 18h<br />Sábado: 09h às 13h
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10 bg-[#15161A]"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.22693536904!2d-34.83401862416805!3d-7.099684669608115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace81155555555%3A0x5555555555555555!2sMana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="absolute inset-0 map-filter"
+              ></iframe>
+            </div>
+          </div>
+          <div
+            class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-500 text-sm">
+              &copy; 2024 Casa do Phone. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/558386044833"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="md:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:bg-[#20bd5a] transition-transform active:scale-95"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="28"
+        height="28"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+        />
+      </svg>
+    </a>
+
+    <!-- Chatbot -->
+    <button
+      id="chat-btn"
+      class="fixed bottom-24 md:bottom-6 right-6 z-40 w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center shadow-lg shadow-gray-900/30 hover:bg-gray-800 transition-transform active:scale-95"
+      aria-label="Abrir chat de dúvidas"
+    >
+      <i data-lucide="message-square" class="w-6 h-6"></i>
+    </button>
+
+    <div
+      id="chat-window"
+      class="hidden fixed bottom-0 right-0 md:bottom-6 md:right-6 z-50 w-full md:w-[380px] h-[100dvh] md:h-[600px] bg-white md:rounded-2xl shadow-2xl flex flex-col border border-gray-200 overflow-hidden chat-window"
+    >
+      <div class="bg-gray-900 text-white p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center"
+          >
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-sm">Assistente Virtual</h3>
+            <p class="text-xs text-gray-400">Tire suas dúvidas agora</p>
+          </div>
+        </div>
+        <button
+          id="close-chat-btn"
+          class="p-2 hover:bg-white/10 rounded-full transition-colors"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div
+        id="chat-messages"
+        class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50"
+      >
+        <div class="flex justify-start mb-4">
+          <div
+            class="max-w-[85%] p-3 rounded-2xl text-sm bg-white border border-gray-200 text-gray-800 rounded-tl-sm shadow-sm"
+          >
+            Olá! Sou o assistente virtual da Casa do Phone. Como posso ajudar
+            você hoje?
+          </div>
+        </div>
+        <div id="chat-typing" class="hidden flex justify-start mb-4">
+          <div
+            class="bg-white border border-gray-200 p-3 rounded-2xl rounded-tl-sm shadow-sm flex items-center gap-2"
+          >
+            <i
+              data-lucide="loader-2"
+              class="w-4 h-4 animate-spin text-gray-400"
+            ></i>
+            <span class="text-xs text-gray-500">Digitando...</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 bg-white border-t border-gray-100">
+        <div class="flex items-center gap-2">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Digite sua dúvida..."
+            class="flex-1 bg-gray-50 border border-gray-200 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-900 transition-all"
+          />
+          <button
+            id="send-chat-btn"
+            disabled
+            class="w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center flex-shrink-0 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            <i data-lucide="send" class="w-4 h-4 ml-0.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
